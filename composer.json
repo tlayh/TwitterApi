@@ -1,0 +1,13 @@
+{
+    "name": "twitter/api",
+    "type": "library",
+    "description": "The first PHP Library to support OAuth for Twitter's REST API",
+    "keywords": ["twitter", "api"],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.3.2"
+    },
+    "autoload": {
+        "psr-0": { "Twitter\\Api\\": "lib/" }
+    }
+}
