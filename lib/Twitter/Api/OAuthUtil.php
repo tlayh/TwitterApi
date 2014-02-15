@@ -2,11 +2,11 @@
 
 namespace Twitter\Api;
 
-class OAuthUtil 
+class OAuthUtil
 {
   public static function urlencodeRfc3986($input) {
     if (is_array($input)) {
-      return array_map(array('OAuthUtil', 'urlencodeRfc3986'), $input);
+      return array_map(array('\\Twitter\\Api\\OAuthUtil', 'urlencodeRfc3986'), $input);
     } else if (is_scalar($input)) {
       return str_replace(
         '+',
