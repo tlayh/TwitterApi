@@ -84,7 +84,7 @@ class OAuthRequest
     $defaults = array("oauth_version" => OAuthRequest::$version,
                       "oauth_nonce" => OAuthRequest::generateNonce(),
                       "oauth_timestamp" => OAuthRequest::generateTimestamp(),
-                      "oauth_consumerKey" => $consumer->key);
+                      "oauth_consumer_key" => $consumer->key);
     if ($token)
       $defaults['oauth_token'] = $token->key;
 
@@ -240,7 +240,7 @@ class OAuthRequest
 
   public function signRequest($signatureMethod, $consumer, $token) {
     $this->setParameter(
-      "oauth_signatureMethod",
+      "oauth_signature_method",
       $signatureMethod->getName(),
       false
     );
